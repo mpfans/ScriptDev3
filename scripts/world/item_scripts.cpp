@@ -4,7 +4,7 @@
  * the default database scripting in mangos.
  *
  * Copyright (C) 2006-2013  ScriptDev2 <http://www.scriptdev2.com/>
- * Copyright (C) 2014-2016  MaNGOS  <https://getmangos.eu>
+ * Copyright (C) 2014-2017  MaNGOS  <https://getmangos.eu>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -193,7 +193,7 @@ struct item_petrov_cluster_bombs : public ItemScript
         ZONE_ID_HOWLING = 495
     };
 
-    bool ItemUse_item_petrov_cluster_bombs(Player* pPlayer, Item* pItem, const SpellCastTargets& /*pTargets*/)
+    bool OnUse(Player* pPlayer, Item* pItem, const SpellCastTargets& /*pTargets*/)
     {
         if (pPlayer->GetZoneId() != ZONE_ID_HOWLING)
             return false;
